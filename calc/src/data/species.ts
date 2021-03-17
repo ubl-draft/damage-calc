@@ -8670,7 +8670,95 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
 };
 
-const SS: {[name: string]: SpeciesData} = extend(true, {}, SM, SS_PATCH);
+const UBL_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
+  Dunsparce: {bs: {df: 95, sa: 85, sd: 90}},
+  Feraligatr: {types: ['Water', 'Dragon']},
+  Froslass: {bs: {sa: 95}},
+  Furfrou: {otherFormes: ['Furfrou-Dandy', 'Furfrou-Debutante', 'Furfrou-Diamond', 'Furfrou-Heart', 'Furfrou-Kabuki', 'Furfrou-La Reine', 'Furfrou-Matron', 'Furfrou-Pharaoh', 'Furfrou-Star'],},
+  'Furfrou-Dandy': {
+    types: ['Grass'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Debutante': {
+    types: ['Steel'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Diamond': {
+    types: ['Ground'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Heart': {
+    types: ['Fairy'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Kabuki': {
+    types: ['Fire'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-La Reine': {
+    types: ['Water'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Matron': {
+    types: ['Poison'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Pharaoh': {
+    types: ['Dragon'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  'Furfrou-Star': {
+    types: ['Ice'],
+    bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
+    weightkg: 28,
+    abilities: {0: 'Fur Coat'},
+    baseSpecies: 'Furfrou',
+  },
+  Jellicent: {otherFormes: ['Jellicent-F']},
+  'Jellicent-F': {
+    types: ['Water', 'Ghost'],
+    bs: {hp: 100, at: 60, df: 70, sa: 85, sd: 105, sp: 60},
+    abilities: {0: 'Water Absorb'},
+    weightkg: 135,
+    baseSpecies: 'Jellicent',
+  },
+  Kingler: {bs: {hp: 70, df: 100, sa: 40, sd: 90, sl: 80}},
+  Ledian: {bs: {hp: 70, at: 60, df: 80, sa: 65}},
+  Unfezant: {otherFormes: ['Unfezant-F']},
+  'Unfezant-F': {
+    types: ['Normal', 'Flying'],
+    bs: {hp: 80, at: 115, df: 80, sa: 65, sd: 55, sp: 93},
+    abilities: {0: 'Big Pecks'},
+    weightkg: 29,
+    baseSpecies: 'Unfezant',
+  },
+}
+
+const SS: {[name: string]: SpeciesData} = extend(true, {}, SM, SS_PATCH, UBL_PATCH);
 
 delete SS['Pikachu-Starter'];
 delete SS['Eevee-Starter'];
