@@ -1003,7 +1003,7 @@ $(".notation").change(function () {
 });
 
 function clearField() {
-	$("#singles-format").prop("checked", true);
+	$("#doubles-format").prop("checked", true);
 	$("#clear").prop("checked", true);
 	$("#gscClear").prop("checked", true);
 	$("#gravity").prop("checked", false);
